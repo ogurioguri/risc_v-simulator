@@ -17,8 +17,8 @@
 					<DistClean command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="CPU">
-				<Option output="/home/oguricap/Verilog/下发/cmake-build-debug/CPU" prefix_auto="0" extension_auto="0"/>
+			<Target title="code">
+				<Option output="/home/oguricap/Verilog/下发/cmake-build-debug/code" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/oguricap/Verilog/下发/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -36,14 +36,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPU"/>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 code"/>
 					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="CPU/fast">
-				<Option output="/home/oguricap/Verilog/下发/cmake-build-debug/CPU" prefix_auto="0" extension_auto="0"/>
+			<Target title="code/fast">
+				<Option output="/home/oguricap/Verilog/下发/cmake-build-debug/code" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/oguricap/Verilog/下发/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -61,7 +61,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPU/fast"/>
+					<Build command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 code/fast"/>
 					<CompileFile command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/gmake -j32 -f &quot;/home/oguricap/Verilog/下发/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -89,58 +89,58 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/oguricap/Verilog/下发/main.cpp">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/tool/circularqueue.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/tool/instruction.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/Decode.cpp">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/Decode.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/Predictor.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/alu.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/cpu.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/loadstorebuffer.cpp">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/loadstorebuffer.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/memory.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/op_queue.cpp">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/op_queue.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/registers.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/reoderbuffer.cpp">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/reoderbuffer.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/reservation_stations.cpp">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/unit/reservation_stations.h">
-			<Option target="CPU"/>
+			<Option target="code"/>
 		</Unit>
 		<Unit filename="/home/oguricap/Verilog/下发/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

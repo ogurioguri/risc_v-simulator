@@ -13,17 +13,21 @@ void op_queue::execute(unsigned int &pc,
 void op_queue::update() {
   old_pointer = pointer;
 }
-void op_queue::init() {
+void op_queue::init(Memory &memory) {
   std::string input;
   int len = 0;
   int rear = 0;
+  int memory_rear = 0;
   unsigned int input_ins = 0;
   while (std::cin >> input) {
 	if (input[0] == '@') {
 	  rear = std::stoi(input.substr(1), nullptr, 16) /4;
+	  memory_rear = std::stoi(input.substr(1), nullptr, 16);
 	  continue;
 	} else {
+	  memory.store_byte(memory_rear, static_cast<int8_t>(std::stoi(input, nullptr, 16)));
 	  input_ins = input_ins | static_cast<unsigned int>(std::stoi(input, nullptr, 16)) << (8 * len);
+	  memory_rear++;
 	  len++;
 	  if (len == 4) {
 		init_array[rear] = input_ins;

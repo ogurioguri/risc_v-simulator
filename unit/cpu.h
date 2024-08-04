@@ -43,7 +43,7 @@ class CPU {
 	reorder_buffer = ReorderBuffer();
 	reservation_stations = ReservationStations();
 	load_store_buffer = LoadStoreBuffer();
-	Op_queue.init();
+	Op_queue.init(memory);
   };
   void update(){
 	old_PC = pc;

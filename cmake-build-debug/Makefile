@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CPU
+# Target rules for targets named code
 
 # Build rule for target.
-CPU: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CPU
-.PHONY : CPU
+code: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 code
+.PHONY : code
 
 # fast build rule for target.
-CPU/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/build
-.PHONY : CPU/fast
+code/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/build
+.PHONY : code/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 unit/Decode.o: unit/Decode.cpp.o
@@ -158,7 +158,7 @@ unit/Decode.o: unit/Decode.cpp.o
 
 # target to build an object file
 unit/Decode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/Decode.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/Decode.cpp.o
 .PHONY : unit/Decode.cpp.o
 
 unit/Decode.i: unit/Decode.cpp.i
@@ -166,7 +166,7 @@ unit/Decode.i: unit/Decode.cpp.i
 
 # target to preprocess a source file
 unit/Decode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/Decode.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/Decode.cpp.i
 .PHONY : unit/Decode.cpp.i
 
 unit/Decode.s: unit/Decode.cpp.s
@@ -174,7 +174,7 @@ unit/Decode.s: unit/Decode.cpp.s
 
 # target to generate assembly for a file
 unit/Decode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/Decode.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/Decode.cpp.s
 .PHONY : unit/Decode.cpp.s
 
 unit/loadstorebuffer.o: unit/loadstorebuffer.cpp.o
@@ -182,7 +182,7 @@ unit/loadstorebuffer.o: unit/loadstorebuffer.cpp.o
 
 # target to build an object file
 unit/loadstorebuffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/loadstorebuffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/loadstorebuffer.cpp.o
 .PHONY : unit/loadstorebuffer.cpp.o
 
 unit/loadstorebuffer.i: unit/loadstorebuffer.cpp.i
@@ -190,7 +190,7 @@ unit/loadstorebuffer.i: unit/loadstorebuffer.cpp.i
 
 # target to preprocess a source file
 unit/loadstorebuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/loadstorebuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/loadstorebuffer.cpp.i
 .PHONY : unit/loadstorebuffer.cpp.i
 
 unit/loadstorebuffer.s: unit/loadstorebuffer.cpp.s
@@ -198,7 +198,7 @@ unit/loadstorebuffer.s: unit/loadstorebuffer.cpp.s
 
 # target to generate assembly for a file
 unit/loadstorebuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/loadstorebuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/loadstorebuffer.cpp.s
 .PHONY : unit/loadstorebuffer.cpp.s
 
 unit/op_queue.o: unit/op_queue.cpp.o
@@ -206,7 +206,7 @@ unit/op_queue.o: unit/op_queue.cpp.o
 
 # target to build an object file
 unit/op_queue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/op_queue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/op_queue.cpp.o
 .PHONY : unit/op_queue.cpp.o
 
 unit/op_queue.i: unit/op_queue.cpp.i
@@ -214,7 +214,7 @@ unit/op_queue.i: unit/op_queue.cpp.i
 
 # target to preprocess a source file
 unit/op_queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/op_queue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/op_queue.cpp.i
 .PHONY : unit/op_queue.cpp.i
 
 unit/op_queue.s: unit/op_queue.cpp.s
@@ -222,7 +222,7 @@ unit/op_queue.s: unit/op_queue.cpp.s
 
 # target to generate assembly for a file
 unit/op_queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/op_queue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/op_queue.cpp.s
 .PHONY : unit/op_queue.cpp.s
 
 unit/reoderbuffer.o: unit/reoderbuffer.cpp.o
@@ -230,7 +230,7 @@ unit/reoderbuffer.o: unit/reoderbuffer.cpp.o
 
 # target to build an object file
 unit/reoderbuffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/reoderbuffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/reoderbuffer.cpp.o
 .PHONY : unit/reoderbuffer.cpp.o
 
 unit/reoderbuffer.i: unit/reoderbuffer.cpp.i
@@ -238,7 +238,7 @@ unit/reoderbuffer.i: unit/reoderbuffer.cpp.i
 
 # target to preprocess a source file
 unit/reoderbuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/reoderbuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/reoderbuffer.cpp.i
 .PHONY : unit/reoderbuffer.cpp.i
 
 unit/reoderbuffer.s: unit/reoderbuffer.cpp.s
@@ -246,7 +246,7 @@ unit/reoderbuffer.s: unit/reoderbuffer.cpp.s
 
 # target to generate assembly for a file
 unit/reoderbuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/reoderbuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/reoderbuffer.cpp.s
 .PHONY : unit/reoderbuffer.cpp.s
 
 unit/reservation_stations.o: unit/reservation_stations.cpp.o
@@ -254,7 +254,7 @@ unit/reservation_stations.o: unit/reservation_stations.cpp.o
 
 # target to build an object file
 unit/reservation_stations.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/reservation_stations.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/reservation_stations.cpp.o
 .PHONY : unit/reservation_stations.cpp.o
 
 unit/reservation_stations.i: unit/reservation_stations.cpp.i
@@ -262,7 +262,7 @@ unit/reservation_stations.i: unit/reservation_stations.cpp.i
 
 # target to preprocess a source file
 unit/reservation_stations.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/reservation_stations.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/reservation_stations.cpp.i
 .PHONY : unit/reservation_stations.cpp.i
 
 unit/reservation_stations.s: unit/reservation_stations.cpp.s
@@ -270,7 +270,7 @@ unit/reservation_stations.s: unit/reservation_stations.cpp.s
 
 # target to generate assembly for a file
 unit/reservation_stations.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU.dir/build.make CMakeFiles/CPU.dir/unit/reservation_stations.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/unit/reservation_stations.cpp.s
 .PHONY : unit/reservation_stations.cpp.s
 
 # Help Target
@@ -281,7 +281,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CPU"
+	@echo "... code"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

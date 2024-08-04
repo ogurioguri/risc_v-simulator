@@ -2,9 +2,9 @@
 #include"reservation_stations.h"
 namespace Komeiji {
 void ReservationStations::add(rob_ins &to_rs, Registers &registers, unsigned int index) {
-//  if(to_rs.detail_type == opera::Xor){
-//	int i = 0;
-//  }
+  if(to_rs.detail_type == opera::Jalr){
+	int i = 0;
+  }
 //  if(registers.next_depend_rob_id[10] == 1){
 //	int i = 0;
 //  }
@@ -48,11 +48,16 @@ void ReservationStations::add(rob_ins &to_rs, Registers &registers, unsigned int
   if (rs_buffer_next.full()) {
 	throw "ReservationStations is full";
   }
-//  for (int i = 14; i < 16; i++) {
-//	std::cout << "x" << i << "=" << std::hex << std::uppercase << std::setw(8) << std::setfill
-//		('0') << registers[i]
+//
+//  for (int i = 1; i < 2; i++) {
+//	std::cout << "x" << i << "=" << std::hex << std::uppercase << std::setw(8) << std::setfill('0') << registers[i]
 //			  << std::endl;
 //  }
+//  for (int i = 15; i < 16; i++) {
+//	std::cout << "x" << i << "=" << std::hex << std::uppercase << std::setw(8) << std::setfill('0') << registers[i]
+//			  << std::endl;
+//  }
+
 }
 bool ReservationStations::isFull() const {
   for (int i = 0; i < robsize; i++) {
@@ -67,9 +72,10 @@ void ReservationStations::execute(LoadStoreBuffer &load_store_buffer,
 								  ALU &alu,
 								  Memory &memory) {
   //从alu与lsb中取出结果进行更新
-//  if (rs_buffer_next[0].ins.detail_type == opera::Bge) {
-//	int i = 0;
-//  }
+//  std::cout<<memory.memory[0x1ffe8]<<'\n';
+  if (rs_buffer_next[0].ins.detail_type == opera::Jalr) {
+	int i = 0;
+  }
   if (alu.old_busy) {
 	unsigned int result = alu.output();
 	for (int i = 0; i < robsize; i++) {
@@ -168,7 +174,7 @@ void ReservationStations::execute(LoadStoreBuffer &load_store_buffer,
 		  } else if (rs_buffer_next[i].ins.detail_type == opera::Sw) {
 			to_lsb.type = lsb_type::Sw;
 		  }
-		  flag_to_alu_next = true;
+		  flag_to_lsb_next = true;
 		  to_lsb.address = rs_buffer_next[i].A;
 		  to_lsb.value = rs_buffer_next[i].Vk;
 		  load_store_buffer.add(to_lsb);

@@ -6,12 +6,13 @@
 #include"Decode.h"
 namespace Komeiji {
 class Decode;
+class Memory;
 class op_queue {
  public:
   op_queue();
   void execute(unsigned int &pc, const Decode &decode);
   void update();
-  void init();
+  void init(Memory &memory);
   unsigned int init_array[0x10000];
   unsigned int old_pointer;
   unsigned int pointer;

@@ -136,10 +136,14 @@ class RV32IInterpreter {
   friend void Execute_and(RV32IInterpreter &interpreter, uint32_t instruction);
 
   void PrintRegisters() {
-	for (int i = 14; i < 16; i++) {
+	for (int i = 1; i < 2; i++) {
 	  std::cout << "x" << i << "=" << std::hex << std::uppercase << std::setw(8) << std::setfill('0') << reg[i]
 				 << std::endl;
 	}
+//	for (int i = 15; i < 16; i++) {
+//	  std::cout << "x" << i << "=" << std::hex << std::uppercase << std::setw(8) << std::setfill('0') << reg[i]
+//				<< std::endl;
+//	}
   }
 
  public:
@@ -194,6 +198,7 @@ class RV32IInterpreter {
 	  // uint8_t opcode=IR&127;
 	  std::cout<<"PC: "<<std::hex<<PC<<std::endl;
 //	  std::cout << "csu is committing instruct " << std::hex << std::setw(8) << std::setfill('0') <<std::uppercase<< IR << std::endl;
+//      std::cout<<this->dat[0x1ffe8]<<std::endl;
 	  PrintRegisters();
 	  Decode(IR)(*this, IR);
 	  DEBUG_CERR << std::endl;

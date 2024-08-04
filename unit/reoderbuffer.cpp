@@ -18,6 +18,9 @@ void ReorderBuffer::execute(Registers & registers, ReservationStations & reserva
   commit(registers, reservation_stations,pc,pc_next,decoder);
 }
 void ReorderBuffer::commit(Registers &registers,ReservationStations &reservation_stations,unsigned int pc,unsigned int &pc_next,Decode &decoder) {
+//  if(){
+//	int i = 0;
+//  }
   if (buffer.empty()) {
 	return;
   }
@@ -42,8 +45,8 @@ void ReorderBuffer::commit(Registers &registers,ReservationStations &reservation
 	} else if(entry.ins.type == instruction_type::S){
 	  // do nothing
 	} else if(entry.ins.type == instruction_type::B){
-	  if(entry.ins.detail_type == opera::Bge){
-		int j = 0;
+	  if(entry.ins.detail_type == opera::Beq && pc == 0x101c){
+		int i = 0;
 	  }
 	  if(entry.value == 1){
 		pc_next = entry.ins.imm+pc;

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "CPU"
+			"path" : "code"
 		}
 	],
 	"backtrace" : 1,
@@ -84,7 +84,7 @@
 			]
 		}
 	],
-	"id" : "CPU::@6890427a1f51a3e7e1df",
+	"id" : "code::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -100,8 +100,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "CPU",
-	"nameOnDisk" : "CPU",
+	"name" : "code",
+	"nameOnDisk" : "code",
 	"paths" : 
 	{
 		"build" : ".",

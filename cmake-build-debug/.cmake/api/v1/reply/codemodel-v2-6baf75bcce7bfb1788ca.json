@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "CPU::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CPU-Debug-471280440e9999094284.json",
-					"name" : "CPU",
+					"id" : "code::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-code-Debug-4be8f06682df3213ed79.json",
+					"name" : "code",
 					"projectIndex" : 0
 				}
 			]
