@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/CPU.dir/unit/Decode.cpp.o CMakeFiles/CPU.dir/unit/op_queue.cpp.o CMakeFiles/CPU.dir/unit/reoderbuffer.cpp.o CMakeFiles/CPU.dir/unit/reservation_stations.cpp.o CMakeFiles/CPU.dir/unit/loadstorebuffer.cpp.o CMakeFiles/CPU.dir/main.cpp.o -o CPU 
